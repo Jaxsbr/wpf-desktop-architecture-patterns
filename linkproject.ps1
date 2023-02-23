@@ -1,5 +1,5 @@
 $slnItem = (Get-ChildItem $PWD | Where-Object { $_.Name.EndsWith(".sln") })[0]
-$slnName = $slnItem.Name.Replace(".sln", "")
+$slnName = $slnItem.Name
 $projectDirectories = Get-ChildItem $PWD | Where-Object { $_.Name.StartsWith("Example.")}
 
 Write-Host $slnName
