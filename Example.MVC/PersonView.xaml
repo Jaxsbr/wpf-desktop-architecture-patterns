@@ -1,12 +1,18 @@
-﻿<Window x:Class="Example.MVC.MainWindow"
+<Window x:Class="Example.MVC.PersonView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Example.MVC"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Show Person View" Click="Show_Click" Height="50" Width="150"/>
-    </Grid>
+        Title="Person View" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock Text="First Name:" />
+        <TextBox Text="{Binding FirstName}" />
+
+        <TextBlock Text="Last Name:" />
+        <TextBox Text="{Binding LastName}" />
+
+        <Button x:Name="SaveButton" Content="SAVE"/>
+    </StackPanel>
 </Window>

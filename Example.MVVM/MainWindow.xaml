@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:Example.MVVM"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
+        <TextBlock Text="First Name:" />
+        <TextBox Text="{Binding FirstName}" />
 
-    </Grid>
+        <TextBlock Text="Last Name:" />
+        <TextBox Text="{Binding LastName}" />
+        
+        <Button Click="Save_Click" Content="SAVE" />
+    </StackPanel>
 </Window>

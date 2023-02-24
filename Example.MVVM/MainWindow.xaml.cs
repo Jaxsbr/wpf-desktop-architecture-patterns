@@ -20,9 +20,23 @@ namespace Example.MVVM
     /// </summary>
     public partial class MainWindow : Window
     {
+        private PersonViewModel _personViewModel;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            // Simulate loading data from a store
+            _personViewModel = new PersonViewModel();
+            _personViewModel.FirstName = "Buzz";
+            _personViewModel.LastName = "Lightyear";
+
+            DataContext = _personViewModel;
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Saving change as: {_personViewModel.ToString()}");
         }
     }
 }
